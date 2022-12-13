@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root {
+      @apply h-full font-roboto
+  }
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
+
+#heroTitle {
+  animation-name: texts;
+  animation: texts 2s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+@keyframes texts {
+  0% {
+    transform: scaleX(0);
+    background-color: red;
+    opacity: 0;
+  }
+
+  100% {
+    transform: scaleX(1);
+    background-color: aqua;
+    opacity: 1;
+  }
+}
